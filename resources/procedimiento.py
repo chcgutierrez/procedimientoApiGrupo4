@@ -10,5 +10,5 @@ class ProcedimientoApi(Resource):
     def post(self):
         body = request.get_json()
         procedimiento = Procedimiento(**body).save()
-        id = procedimiento.id
+        procedim_id = procedimiento.id
         return {'id': str(id)}, 200
