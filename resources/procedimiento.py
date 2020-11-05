@@ -4,8 +4,8 @@ from flask_restful import Resource
 
 class ProcedimientoApi(Resource):
     def get(self):
-        procedimientos = Procedimiento.objects().to_json()
-        return Response(procedimientos, mimetype="application/json", status=200)
+        procedimiento = Procedimiento.objects().to_json()
+        return Response(procedimiento, mimetype="application/json", status=200)
 
     def post(self):
         body = request.get_json()
